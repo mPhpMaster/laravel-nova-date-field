@@ -1,0 +1,29 @@
+{
+    "name": "@mphpmaster/laravel-nova-date-field",
+    "version": "1.0.0",
+    "description": "Laravel Nova Date Field By hlaCk",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mPhpMaster/laravel-nova-date-field.git"
+    },
+    "keywords": [
+        "helpers",
+        "laravel",
+        "nova",
+        "date",
+        "field"
+    ],
+    "author": "mPhpMaster",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/mPhpMaster/laravel-nova-date-field/issues"
+    },
+    "homepage": "https://github.com/mPhpMaster/laravel-nova-date-field#readme",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    }
+}

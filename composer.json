@@ -1,0 +1,36 @@
+{
+    "name": "mphpmaster/laravel-nova-date-field",
+    "description": "Laravel Nova Date Field",
+    "type": "library",
+    "keywords": [
+        "helpers",
+        "laravel",
+        "nova",
+        "date",
+        "field"
+    ],
+    "require": {
+        "php": ">=7.4",
+        "laravel/framework": ">=5.8"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mPhpMaster",
+            "email": "59211285+mPhpMaster@users.noreply.github.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "MPhpMaster\\LaravelNovaDateField\\": "src"
+        },
+        "files": [
+            "src/Helpers/Functions.php"
+        ]
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "version": "1.0.0"
+}
