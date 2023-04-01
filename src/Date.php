@@ -2,82 +2,85 @@
 
 namespace MPhpMaster\LaravelNovaDateField;
 
+/**
+ * @deprecated Use \Laravel\Nova\Fields\Date instead.
+ */
 class Date extends \Laravel\Nova\Fields\Date
 {
-    public function addRuleAfter($value, $is_creation = false, $is_update = false)
+    public function addRuleAfter($attributeOrValue, $is_creation = false, $is_update = false)
     {
         $var = $is_creation ? 'creationRules' : ($is_update ? 'updateRules' : 'rules');
         $rules = $this->$var ?: [];
-        $rules[] = 'after:' . value($value);
+        $rules[] = 'after:' . value($attributeOrValue);
 
         $this->rules(array_unique($rules));
 
         return $this;
     }
 
-    public function addRuleAfterOrEqual($value, $is_creation = false, $is_update = false)
+    public function addRuleAfterOrEqual($attributeOrValue, $is_creation = false, $is_update = false)
     {
         $var = $is_creation ? 'creationRules' : ($is_update ? 'updateRules' : 'rules');
         $rules = $this->$var ?: [];
-        $rules[] = 'after_or_equal:' . value($value);
+        $rules[] = 'after_or_equal:' . value($attributeOrValue);
 
         $this->rules(array_unique($rules));
 
         return $this;
     }
 
-    public function addRuleBefore($value, $is_creation = false, $is_update = false)
+    public function addRuleBefore($attributeOrValue, $is_creation = false, $is_update = false)
     {
         $var = $is_creation ? 'creationRules' : ($is_update ? 'updateRules' : 'rules');
         $rules = $this->$var ?: [];
-        $rules[] = 'before:' . value($value);
+        $rules[] = 'before:' . value($attributeOrValue);
 
         $this->rules(array_unique($rules));
 
         return $this;
     }
 
-    public function addRuleBeforeOrEqual($value, $is_creation = false, $is_update = false)
+    public function addRuleBeforeOrEqual($attributeOrValue, $is_creation = false, $is_update = false)
     {
         $var = $is_creation ? 'creationRules' : ($is_update ? 'updateRules' : 'rules');
         $rules = $this->$var ?: [];
-        $rules[] = 'before_or_equal:' . value($value);
+        $rules[] = 'before_or_equal:' . value($attributeOrValue);
 
         $this->rules(array_unique($rules));
 
         return $this;
     }
 
-    public function setRuleAfter($value, $is_creation = false, $is_update = false)
+    public function setRuleAfter($attributeOrValue, $is_creation = false, $is_update = false)
     {
         $var = $is_creation ? 'creationRules' : ($is_update ? 'updateRules' : 'rules');
         $this->$var = [];
 
-        return $this->addRuleAfter($value);
+        return $this->addRuleAfter($attributeOrValue);
     }
 
-    public function setRuleAfterOrEqual($value, $is_creation = false, $is_update = false)
+    public function setRuleAfterOrEqual($attributeOrValue, $is_creation = false, $is_update = false)
     {
         $var = $is_creation ? 'creationRules' : ($is_update ? 'updateRules' : 'rules');
         $this->$var = [];
 
-        return $this->addRuleAfterOrEqual($value);
+        return $this->addRuleAfterOrEqual($attributeOrValue);
     }
 
-    public function setRuleBefore($value, $is_creation = false, $is_update = false)
+    public function setRuleBefore($attributeOrValue, $is_creation = false, $is_update = false)
     {
         $var = $is_creation ? 'creationRules' : ($is_update ? 'updateRules' : 'rules');
         $this->$var = [];
 
-        return $this->addRuleBefore($value);
+        return $this->addRuleBefore($attributeOrValue);
     }
 
-    public function setRuleBeforeOrEqual($value, $is_creation = false, $is_update = false)
+    public function setRuleBeforeOrEqual($attributeOrValue, $is_creation = false, $is_update = false)
     {
         $var = $is_creation ? 'creationRules' : ($is_update ? 'updateRules' : 'rules');
         $this->$var = [];
 
-        return $this->addRuleBeforeOrEqual($value);
+        return $this->addRuleBeforeOrEqual($attributeOrValue);
     }
 
     // region: shorts

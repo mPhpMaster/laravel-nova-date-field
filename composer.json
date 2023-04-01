@@ -10,8 +10,9 @@
         "field"
     ],
     "require": {
-        "php": ">=7.4",
-        "laravel/framework": ">=5.8"
+        "php": ">=8",
+        "laravel/framework": ">=7",
+        "laravel/nova": ">=3"
     },
     "license": "MIT",
     "authors": [
@@ -28,9 +29,16 @@
             "src/Helpers/Functions.php"
         ]
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MPhpMaster\\LaravelNovaDateField\\Providers\\HelpersProvider"
+            ]
+        }
+    },
     "config": {
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "version": "1.0.0"
+    "version": "2.0.0"
 }
