@@ -101,7 +101,7 @@ public function fields(Request $request)
 * `$is_creation = false`: <small>Use `creationRules` method</small>.
 * `$is_update = false`: <small>Use `updateRules` method</small>.
 
-> **Note**: if both `$is_creation` and `$is_update` is `false` it will use `rules` method.
+> **Note**: if both `$is_creation` and `$is_update` are `false` it will use `rules` method.
 
 
 ## License
